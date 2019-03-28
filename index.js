@@ -8,7 +8,11 @@ app.set('views', __dirname + 'src/views');
 
 
 app.get('/', (req, res) => {
-    res.send('Hello!!');
+    //res.send('Hello!!');
+    // Whereby the first parameter ‘hello’ refers to the hello.html file 
+    // (no need to include the extension (e.g. hello.html) 
+    // as it has been previously set as html.
+    res.render('views/user.html', {"name": "Dominicode"});
 });
 
 app.listen(4001, ()=> console.log(`Server running on port 4001`));
