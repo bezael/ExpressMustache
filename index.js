@@ -12,7 +12,11 @@ app.get('/', (req, res) => {
     // Whereby the first parameter ‘hello’ refers to the hello.html file 
     // (no need to include the extension (e.g. hello.html) 
     // as it has been previously set as html.
-    res.render('index', {"name": "Node"});
+    res.render('index', {"title":"MustacheExpress"});
+});
+
+app.get('/user', (req,res) =>{
+    res.render('user', {"name": "Dominicode"});    
 });
 
 app.listen(4001, ()=> console.log(`Server running on port 4001`));
