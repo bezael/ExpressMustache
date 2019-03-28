@@ -4,7 +4,7 @@ const mustacheExpress = require('mustache-express');
 const app = express();
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
-app.set('views', __dirname + 'src/views');
+app.set('views', __dirname + '/views');
 
 
 app.get('/', (req, res) => {
@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     // Whereby the first parameter ‘hello’ refers to the hello.html file 
     // (no need to include the extension (e.g. hello.html) 
     // as it has been previously set as html.
-    res.render('views/user.html', {"name": "Dominicode"});
+    res.render('index', {"name": "Node"});
 });
 
 app.listen(4001, ()=> console.log(`Server running on port 4001`));
